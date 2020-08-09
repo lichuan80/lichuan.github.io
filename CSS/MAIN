@@ -1,0 +1,5 @@
+.title {  font-family: "·ÂËÎ_GB2312"; font-size: 18px; color: #FFFF33}
+.text_gb { font-family: "¿¬Ìå_GB2312"; font-size: 18px; color: #FFFFFF }
+.text_e { font-family: "Courier New", "Courier", "mono"; font-size: 16px; color: #FFFFFF }
+.table_split {  background-color: #FFFF00}
+.table_content {  background-color: #6600FF}
