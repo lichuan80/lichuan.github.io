@@ -60,6 +60,11 @@ $(function() {
     updateCharacter();
   });
 
+  $( ".character-select" ).change(function(evt) {
+	 evt.preventDefault();
+	 updateCharacter();
+  });
+
   $('#animate').on('click', function(evt) {
     evt.preventDefault();
     animationWriter.animateCharacter();
