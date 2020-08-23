@@ -15,6 +15,13 @@ function updateCharacter() {
   $('#quiz-target').html('');
 
   var character = $('#character-select').val();
+
+  if(pinyin) {
+	var py = pinyin(character)
+	console.log(py);
+	$('#pinying').html(py[0]);
+  }
+  
   $('.char-symbol').text(character);
   animationWriter = HanziWriter.create('animation-target', character, {
     width: 300,
