@@ -7,7 +7,6 @@
         let htmlString = '<ul>';
         for (let file of data) {
 		  let path = file.path;
-		  path.replace(".html", "");
           htmlString += `<li><a href="${path}">${file.name}</a></li>`;
         }
         htmlString += '</ul>';
