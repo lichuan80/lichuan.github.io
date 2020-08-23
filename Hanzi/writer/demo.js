@@ -5,8 +5,8 @@ var isCharVisible;
 var isOutlineVisible;
 
 function deleteCharacter() {
-  $('#animation-target').html('');
-  $('#quiz-target').html('');
+//  $('#animation-target').html('');
+//  $('#quiz-target').html('');
   $('#character-select').val('');
 }
 
