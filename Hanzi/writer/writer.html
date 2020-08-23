@@ -12,6 +12,14 @@
     <link rel="canonical" href="https://hanziwriter.org/demo.html">
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
     <script type="application/javascript" src="hanzi-writer.min.js"></script>
+	
+<style>
+.rectangle {
+  height: 20px;
+  width: 100%;
+  background-color: #555;
+}	
+</style>
 </head>
 
 
@@ -26,8 +34,10 @@
       </label>
       <input type="text" class="form-control character-select" id="character-select" size="10" maxlength="1" value="我" />
     </div>
+	<button id="delete" class="btn btn-default">删除</button>
     <button type="submit" class="btn btn-default">更新</button>
   </form>
+
 
   <hr class="demo-divider" />
 
@@ -45,6 +55,8 @@
   </div>
 
   <hr class="demo-divider" />
+
+<div class="rectangle"></div>
 
   <h4>笔画考试</h4>
 

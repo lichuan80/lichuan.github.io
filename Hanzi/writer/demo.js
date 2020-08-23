@@ -4,6 +4,12 @@ var character;
 var isCharVisible;
 var isOutlineVisible;
 
+function deleteCharacter() {
+  $('#animation-target').html('');
+  $('#quiz-target').html('');
+  $('#character-select').val('');
+}
+
 function updateCharacter() {
   $('#animation-target').html('');
   $('#quiz-target').html('');
@@ -37,6 +43,11 @@ function shouldShowOutline(demoType) {
 $(function() {
   updateCharacter();
 
+  $('#delete').on('click', function(evt) {
+    evt.preventDefault();
+    deleteCharacter();
+  });
+  
   $('.js-char-form').on('submit', function(evt) {
     evt.preventDefault();
     updateCharacter();
